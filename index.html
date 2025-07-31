@@ -20,6 +20,17 @@
       overflow-x: hidden;
     }
 
+    .logo-bar {
+      text-align: center;
+      background-color: #f9f9f9;
+      padding: 15px 0;
+    }
+
+    .logo-bar img {
+      height: 60px;
+      max-width: 200px;
+    }
+
     header {
       width: 100%;
       height: 100vh;
@@ -127,12 +138,10 @@
 </head>
 <body>
 
-  <header>
-    <div>
-      <h1>Safar aj kal Holidays</h1>
-      <p>Your Gateway to Memorable Journeys – Trusted Travel Experiences Across India</p>
-    </div>
-  </header>
+  <!-- Logo at the top -->
+  <div class="logo-bar">
+    <img src="https://safarajkalholidays.github.io/logo.png" alt="Safar aj kal Holidays Logo" />
+  </div>
 
   <nav>
     <a href="#">Home</a>
@@ -140,6 +149,13 @@
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <header>
+    <div>
+      <h1>Safar aj kal Holidays</h1>
+      <p>Your Gateway to Memorable Journeys – Trusted Travel Experiences Across India</p>
+    </div>
+  </header>
 
   <section class="section" id="packages">
     <h2>Top Travel Packages</h2>
