@@ -22,55 +22,41 @@
       top: 0;
       z-index: 999;
     }
-    .logo-section {
-      display: flex;
-      align-items: center;
-    }
-    header img {
+    .logo-section img {
       height: 50px;
-      margin-right: 20px;
     }
-    .basic-nav a {
-      margin-right: 15px;
-      text-decoration: none;
+    .menu-toggle {
+      font-size: 24px;
       color: #333;
-      font-weight: bold;
+      cursor: pointer;
+      display: block;
+      z-index: 1001;
     }
-    .dropdown {
-      position: relative;
-      display: inline-block;
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100vh;
+      background-color: #fff;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
     }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
+    .mobile-nav a {
+      color: #333;
       text-decoration: none;
-      display: block;
+      font-size: 18px;
     }
-    .dropdown-content a:hover {
-      background-color: #f1f1f1;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    .dropdown:hover .dropbtn {
+    .mobile-nav a:hover {
       color: #f76b1c;
     }
-    .dropbtn {
-      background-color: #fff;
-      color: #333;
-      padding: 10px;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
+    .mobile-nav.active {
+      right: 0;
     }
     .hero {
       background-image: url('https://safarajkalholidays.github.io/drj.jpg');
@@ -127,27 +113,27 @@
       z-index: 9999;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
+    @media (min-width: 768px) {
+      .menu-toggle, .mobile-nav {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-section">
       <img src="https://safarajkalholidays.github.io/logo.png" alt="Safar Aj Kal Holidays">
-      <div class="basic-nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
     </div>
-    <div class="dropdown">
-      <button class="dropbtn">Menu</button>
-      <div class="dropdown-content">
-        <a href="#packages">Packages</a>
-        <a href="#faq">FAQs</a>
-        <a href="#blog">Blog</a>
-      </div>
-    </div>
-  </header>  <div class="hero" id="home">
+    <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+  </header>  <nav class="mobile-nav" id="mobileNav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#packages">Packages</a>
+    <a href="#faq">FAQs</a>
+    <a href="#blog">Blog</a>
+  </nav>  <div class="hero" id="home">
     <h1>Safar Aj Kal Holidays</h1>
     <p>Your Gateway to Memorable Journeys – Trusted Travel Experiences Across India</p>
   </div>  <section class="packages" id="packages">
@@ -171,6 +157,10 @@
     <p>&copy; 2025 Safar Aj Kal Holidays</p>
   </footer>  <a href="https://wa.me/917439792489" class="whatsapp-btn" target="_blank">
     <i class="fab fa-whatsapp"></i>
-  </a>
-</body>
+  </a>  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileNav');
+      menu.classList.toggle('active');
+    }
+  </script></body>
 </html>
