@@ -1,267 +1,192 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Logo Recreation</title><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: #000; /* Change this to match your section background */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .logo-text {
-      font-family: 'Montserrat', sans-serif;
-      color: #111;
-      text-align: center;
-    }
-
-    .logo-line-1 {
-      font-size: 48px;
-      font-weight: 800;
-      color: #111;
-      letter-spacing: 2px;
-    }
-
-    .logo-line-1 span.orange {
-      color: #f97316; /* Orange */
-    }
-
-    .logo-line-2 {
-      margin-top: 5px;
-      font-size: 18px;
-      font-weight: 500;
-      letter-spacing: 12px;
-      color: #222;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="logo-text">
-    <div class="logo-line-1">
-      SAFAR <span class="orange">AJ</span> <span class="orange">KAL</span>
-    </div>
-    <div class="logo-line-2">HOLIDAYS</div>
-  </div>
-
-</body>
-</html> </title>
-  <meta name="description" content="Explore curated travel packages across India with Safar aj kal Holidays - your trusted travel partner for Sikkim, Darjeeling, Sundarban & more." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safar aj kal Holidays</title>
+  <meta name="description" content="Explore curated travel packages across India with Safar aj kal Holidays - your trusted travel partner for Sikkim, Darjeeling, Sundarban & more.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
+    }html, body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
-    html, body {
-      font-family: 'Montserrat', sans-serif;
-      background: #fff;
-      color: #333;
-      overflow-x: hidden;
-    }
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('https://safarajkalholidays.github.io/drj.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
 
-    .logo-container {
-      background-color: #fff;
-      text-align: center;
-      padding: 10px 0;
-    }
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 150px;
+}
 
-    .logo-container img {
-      height: 60px;
-      max-width: 200px;
-    }
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  margin-bottom: 20px;
+}
 
-    header {
-      width: 100%;
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://safarajkalholidays.github.io/drj.jpg') center/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-    }
+header p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
 
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 52px;
-      margin-bottom: 20px;
-    }
+nav {
+  background-color: #003366;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
 
-    header p {
-      font-size: 20px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
 
-    nav {
-      background-color: #003366;
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+nav a:hover {
+  text-decoration: underline;
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-    }
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+.section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+}
 
-    .section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
 
-    .section h2 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 40px;
-      font-family: 'Playfair Display', serif;
-    }
+.card {
+  flex: 1 1 300px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
 
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    .card {
-      flex: 1 1 300px;
-      background: #f5f5f5;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
-    }
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+.card-content {
+  padding: 20px;
+}
 
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+.card-content h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
 
-    .card-content {
-      padding: 20px;
-    }
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 40px 15px;
+}
 
-    .card-content h3 {
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
+footer p {
+  margin-bottom: 8px;
+}
 
-    footer {
-      background: #111;
-      color: #ccc;
-      text-align: center;
-      padding: 40px 15px;
-    }
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 36px;
+  }
+  header p {
+    font-size: 16px;
+  }
+}
 
-    footer p {
-      margin-bottom: 8px;
-    }
   </style>
 </head>
 <body>
-
-  <!-- Logo at the very top -->
-  <div class="logo-container">
-    <img src="https://safarajkalholidays.github.io/logo.png" alt="Safar aj kal Holidays Logo" />
-  </div>
-
-  <!-- Navigation -->
-  <nav>
+  <img src="logo.png" alt="Safar aj kal Holidays Logo" class="logo">  <header>
+    <h1>Safar aj kal Holidays</h1>
+    <p>Your Gateway to Memorable Journeys – Trusted Travel Experiences Across India</p>
+  </header>  <nav>
     <a href="#">Home</a>
     <a href="#packages">Packages</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- Hero Section -->
-  <header>
-    <div>
-      <h1>Safar aj kal Holidays</h1>
-      <p>Your Gateway to Memorable Journeys – Trusted Travel Experiences Across India</p>
-    </div>
-  </header>
-
-  <!-- Packages Section -->
-  <section class="section" id="packages">
+  </nav>  <section class="section" id="packages">
     <h2>Top Travel Packages</h2>
     <div class="cards">
       <div class="card">
-        <img src="https://source.unsplash.com/600x400/?sikkim,mountain" alt="Silk Route" loading="lazy">
+        <img src="https://source.unsplash.com/600x400/?sikkim,mountain" alt="Silk Route">
         <div class="card-content">
           <h3>Silk Route Tour (3N/4D)</h3>
           <p>Explore Icchegaon, Zuluk, and Nathang Valley with scenic views and authentic homestays.</p>
         </div>
       </div>
       <div class="card">
-        <img src="https://source.unsplash.com/600x400/?goa,beach" alt="Goa Honeymoon" loading="lazy">
+        <img src="https://source.unsplash.com/600x400/?goa,beach" alt="Goa Honeymoon">
         <div class="card-content">
           <h3>Romantic Goa Honeymoon</h3>
           <p>Enjoy private beaches, spa stays, Mandovi cruise and candlelight dinners curated for couples.</p>
         </div>
       </div>
       <div class="card">
-        <img src="https://source.unsplash.com/600x400/?sundarbans,forest" alt="Sundarbans Tour" loading="lazy">
+        <img src="https://source.unsplash.com/600x400/?sundarbans,forest" alt="Sundarbans Tour">
         <div class="card-content">
           <h3>Sundarban Group Tour</h3>
           <p>All-inclusive wildlife experience with boat safaris and riverside retreat stays in nature’s lap.</p>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="section" id="about">
+  </section>  <section class="section" id="about">
     <h2>About Us</h2>
     <p style="max-width:800px; margin:auto; text-align:center; font-size:18px;">
       Safar aj kal Holidays is your trusted partner in discovering India’s beauty. With years of experience in organizing family, couple, group and adventure tours — we bring you memorable, safe, and budget-friendly trips to every corner of India. From the hills of Sikkim to the beaches of Goa, we’ve got it all.
     </p>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section" id="contact">
+  </section>  <section class="section" id="contact">
     <h2>Contact Us</h2>
     <p style="text-align:center; font-size:18px;">
       📞 +91 74397 92489 &nbsp; | &nbsp; 📧 info.safarajkal@gmail.com <br><br>
       💬 <a href="https://wa.me/917439792489" style="color:#003366; font-weight:600;">Chat on WhatsApp</a>
     </p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
+  </section>  <footer>
     <p>© 2025 Safar aj kal Holidays. All rights reserved.</p>
     <p>Follow us on Instagram & Facebook: @safarajkalholidays</p>
     <p>Website built on GitHub Pages</p>
   </footer>
-
 </body>
 </html>
