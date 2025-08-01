@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,7 +62,9 @@
       position: relative;
       overflow: hidden;
       width: 100%;
-      height: 80vh;
+      height: 45vh;
+      border-radius: 20px;
+      margin: 20px 0;
     }
     .slides {
       display: flex;
@@ -75,23 +76,19 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 20px;
     }
     .carousel-caption {
       text-align: center;
-      padding: 40px 20px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
+      padding: 20px 20px;
     }
     .carousel-caption h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 10px;
     }
     .carousel-caption p {
-      font-size: 1.2rem;
-      max-width: 80%;
+      font-size: 1.1rem;
+      max-width: 90%;
       margin: auto;
     }
     section {
@@ -142,18 +139,14 @@
       <img src="https://safarajkalholidays.github.io/logo.png" alt="Safar Aj Kal Holidays">
     </div>
     <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
-  </header>
-
-  <nav class="mobile-nav" id="mobileNav">
+  </header>  <nav class="mobile-nav" id="mobileNav">
     <a href="#home" onclick="closeMenu()">Home</a>
     <a href="#about" onclick="closeMenu()">About</a>
     <a href="#contact" onclick="closeMenu()">Contact</a>
     <a href="#packages" onclick="closeMenu()">Packages</a>
     <a href="#faq" onclick="closeMenu()">FAQs</a>
     <a href="#blog" onclick="closeMenu()">Blog</a>
-  </nav>
-
-  <div class="carousel" id="home">
+  </nav>  <div class="carousel" id="home">
     <div class="slides" id="slides">
       <img src="https://safarajkalholidays.github.io/drj.jpg" alt="Slide 1">
       <img src="https://safarajkalholidays.github.io/drj.jpg" alt="Slide 2">
@@ -161,29 +154,19 @@
       <img src="https://safarajkalholidays.github.io/drj.jpg" alt="Slide 4">
       <img src="https://safarajkalholidays.github.io/drj.jpg" alt="Slide 5">
     </div>
-  </div>
-
-  <div class="carousel-caption">
+  </div>  <div class="carousel-caption">
     <h1>Safar Aj Kal Holidays</h1>
     <p>Your Gateway to Memorable Journeys – Trusted Travel Experiences Across India</p>
-  </div>
-
-  <section class="packages" id="packages">
+  </div>  <section class="packages" id="packages">
     <h2>Top Travel Packages</h2>
     <p>✨ Silk Route Tour (3N/4D)<br>✨ Romantic Goa Honeymoon<br>✨ Sundarban Wildlife Group Tour</p>
-  </section>
-
-  <section class="faq" id="faq">
+  </section>  <section class="faq" id="faq">
     <h2>Frequently Asked Questions</h2>
     <p><strong>Q:</strong> How do I book a tour?<br><strong>A:</strong> Contact us or use the enquiry form below.</p>
-  </section>
-
-  <section class="blog" id="blog">
+  </section>  <section class="blog" id="blog">
     <h2>Latest Blog & News</h2>
     <p>Coming soon: Top 10 Hidden Gems in India, How to Plan a Budget Honeymoon, Best Time to Visit Sikkim.</p>
-  </section>
-
-  <footer id="contact">
+  </section>  <footer id="contact">
     <h2>Contact Us</h2>
     <p>📞 +91 74397 92489<br>
     📧 info.safarajkal@gmail.com</p>
@@ -193,13 +176,9 @@
       <a href="https://www.youtube.com/@SafarAjkalHolidays" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
     <p>&copy; 2025 Safar Aj Kal Holidays</p>
-  </footer>
-
-  <a href="https://wa.me/917439792489" class="whatsapp-btn" target="_blank">
+  </footer>  <a href="https://wa.me/917439792489" class="whatsapp-btn" target="_blank">
     <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <script>
+  </a>  <script>
     function toggleMenu() {
       const menu = document.getElementById('mobileNav');
       menu.classList.toggle('active');
@@ -222,12 +201,12 @@
       }
     });
 
-    // Auto slide carousel
+    // Auto slide carousel infinitely
     let index = 0;
+    const totalSlides = 5;
     setInterval(() => {
-      index = (index + 1) % 5;
+      index = (index + 1) % totalSlides;
       document.getElementById('slides').style.transform = `translateX(-${index * 100}%)`;
-    }, 4000);
-  </script>
-</body>
+    }, 6000);
+  </script></body>
 </html>
