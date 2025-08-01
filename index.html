@@ -12,54 +12,27 @@
       box-sizing: border-box;
     }html, body {
   width: 100%;
-  height: 100%;
   font-family: 'Montserrat', sans-serif;
-  background: #fff;
+  background: #f2eaff;
   color: #333;
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-header {
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('drj.jpg') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 40px 20px 80px;
-  position: relative;
-}
-
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 140px;
-}
-
-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px;
-  margin-bottom: 20px;
-}
-
-header p {
-  font-size: 20px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
 nav {
-  background-color: #003366;
+  background-color: #4a2c74;
   padding: 15px;
   display: flex;
-  justify-content: center;
-  gap: 25px;
+  align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 nav a {
@@ -70,6 +43,35 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+header {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('drj.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 .section {
@@ -83,6 +85,7 @@ nav a:hover {
   font-size: 36px;
   margin-bottom: 40px;
   font-family: 'Playfair Display', serif;
+  color: #4a2c74;
 }
 
 .cards {
@@ -94,7 +97,7 @@ nav a:hover {
 
 .card {
   flex: 1 1 300px;
-  background: #f5f5f5;
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -118,53 +121,103 @@ nav a:hover {
 .card-content h3 {
   margin-bottom: 10px;
   font-size: 22px;
-}
-
-.faq {
-  max-width: 800px;
-  margin: 0 auto;
+  color: #4a2c74;
 }
 
 .faq-item {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .faq-item h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #003366;
+  font-weight: 600;
+  color: #4a2c74;
 }
 
-.faq-item p {
-  font-size: 16px;
-  color: #555;
+.blog-post {
+  margin-bottom: 30px;
+}
+
+.blog-post h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #4a2c74;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #4a2c74;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 footer {
-  background: #111;
+  background: #2e1848;
   color: #ccc;
   text-align: center;
-  padding: 40px 15px;
+  padding: 60px 15px 40px;
 }
 
-footer p {
-  margin-bottom: 8px;
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 24px;
+  z-index: 1000;
 }
 
   </style>
 </head>
-<body>  <header>
-    <img src="logo.png" alt="Logo" class="logo">
+<body>  <nav>
+    <div class="nav-links">
+      <img src="logo.png" alt="Safar aj kal Holidays Logo" style="height: 40px; margin-right: 15px;">
+      <a href="#">Home</a>
+      <a href="#packages">Packages</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/safarajkalholidays/profilecard/?igsh=MW5ua3ZpMHNiYWw2bg==" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/share/1YZf5Uj6Qe/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+      </a>
+      <a href="https://www.youtube.com/@SafarAjkalHolidays" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+      </a>
+    </div>
+  </nav>  <header>
     <div>
       <h1>Safar aj kal Holidays</h1>
       <p>Your Gateway to Memorable Journeys – Trusted Travel Experiences Across India</p>
     </div>
-  </header>  <nav>
-    <a href="#">Home</a>
-    <a href="#packages">Packages</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>  <section class="section" id="packages">
+  </header>  <section class="section" id="packages">
     <h2>Top Travel Packages</h2>
     <div class="cards">
       <div class="card">
@@ -196,25 +249,40 @@ footer p {
     </p>
   </section>  <section class="section" id="faq">
     <h2>Frequently Asked Questions</h2>
-    <div class="faq">
-      <div class="faq-item">
-        <h4>How do I book a tour package?</h4>
-        <p>You can call or WhatsApp us directly. Online booking option will be added soon.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Do you offer customized itineraries?</h4>
-        <p>Yes! We personalize every itinerary based on your interests and preferences.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Are all your packages family-friendly?</h4>
-        <p>Yes. We have carefully curated options for families, couples, and senior citizens.</p>
-      </div>
+    <div class="faq-item">
+      <h4>How can I book a package?</h4>
+      <p>Contact us via WhatsApp or email, and we’ll help you book easily.</p>
     </div>
+    <div class="faq-item">
+      <h4>Are your tours customizable?</h4>
+      <p>Yes! We tailor every trip based on your budget, dates, and preferences.</p>
+    </div>
+  </section>  <section class="section" id="blog">
+    <h2>Travel Blog & Updates</h2>
+    <div class="blog-post">
+      <h3>Top 5 Monsoon Destinations in India</h3>
+      <p>Experience lush greenery and cool breezes in places like Kerala, Meghalaya and Coorg.</p>
+    </div>
+    <div class="blog-post">
+      <h3>Why Sikkim Should Be On Your Bucket List</h3>
+      <p>Sikkim offers pristine mountain beauty, friendly locals, and peaceful monasteries.</p>
+    </div>
+  </section>  <section class="section" id="enquiry">
+    <h2>Send Us an Enquiry</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Tell us what you're looking for..."></textarea>
+      <button type="submit">Send Enquiry</button>
+    </form>
   </section>  <footer>
-    <p>📞 +91 74397 92489 &nbsp; | &nbsp; 📧 info.safarajkal@gmail.com</p>
-    <p>💬 <a href="https://wa.me/917439792489" style="color:#4fc3f7; font-weight:600;">Chat on WhatsApp</a></p>
+    <h2>Contact Us</h2>
+    <p>📞 +91 74397 92489</p>
+    <p>📧 info.safarajkal@gmail.com</p>
+    <p>💬 <a href="https://wa.me/917439792489">Chat on WhatsApp</a></p>
     <p>© 2025 Safar aj kal Holidays. All rights reserved.</p>
     <p>Follow us on Instagram & Facebook: @safarajkalholidays</p>
-    <p>Website built on GitHub Pages</p>
-  </footer></body>
+  </footer><a href="https://wa.me/917439792489" id="whatsapp-button" title="Chat with us on WhatsApp">💬</a>
+
+</body>
 </html>
