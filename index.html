@@ -12,6 +12,7 @@
       box-sizing: border-box;
     }html, body {
   width: 100%;
+  height: 100%;
   font-family: 'Montserrat', sans-serif;
   background: #fff;
   color: #333;
@@ -21,30 +22,33 @@
 
 header {
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('https://safarajkalholidays.github.io/drj.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('drj.jpg') center/cover no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 20px;
+  color: white;
+  text-align: center;
+  padding: 40px 20px 80px;
+  position: relative;
 }
 
-header img.logo {
-  width: 150px;
-  margin-bottom: 20px;
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 140px;
 }
 
 header h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  margin-bottom: 15px;
+  font-size: 52px;
+  margin-bottom: 20px;
 }
 
 header p {
-  font-size: 18px;
+  font-size: 20px;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -116,6 +120,26 @@ nav a:hover {
   font-size: 22px;
 }
 
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 25px;
+}
+
+.faq-item h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: #555;
+}
+
 footer {
   background: #111;
   color: #ccc;
@@ -127,29 +151,14 @@ footer p {
   margin-bottom: 8px;
 }
 
-details {
-  background: #f5f5f5;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-
-summary {
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
   </style>
 </head>
 <body>  <header>
-    <img src="logo.png" alt="Safar aj kal Holidays Logo" class="logo" />
-    <h1>Safar aj kal Holidays</h1>
-    <p>Your Gateway to Memorable Journeys – Trusted Travel Experiences Across India</p>
+    <img src="logo.png" alt="Logo" class="logo">
+    <div>
+      <h1>Safar aj kal Holidays</h1>
+      <p>Your Gateway to Memorable Journeys – Trusted Travel Experiences Across India</p>
+    </div>
   </header>  <nav>
     <a href="#">Home</a>
     <a href="#packages">Packages</a>
@@ -185,33 +194,25 @@ summary::-webkit-details-marker {
     <p style="max-width:800px; margin:auto; text-align:center; font-size:18px;">
       Safar aj kal Holidays is your trusted partner in discovering India’s beauty. With years of experience in organizing family, couple, group and adventure tours — we bring you memorable, safe, and budget-friendly trips to every corner of India. From the hills of Sikkim to the beaches of Goa, we’ve got it all.
     </p>
-  </section>  <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <p style="text-align:center; font-size:18px;">
-      📞 +91 74397 92489 &nbsp; | &nbsp; 📧 info.safarajkal@gmail.com <br><br>
-      💬 <a href="https://wa.me/917439792489" style="color:#003366; font-weight:600;">Chat on WhatsApp</a>
-    </p>
   </section>  <section class="section" id="faq">
     <h2>Frequently Asked Questions</h2>
-    <div style="max-width: 800px; margin: auto;">
-      <details>
-        <summary><strong>What documents are needed to travel to Sikkim?</strong></summary>
-        <p>Indian nationals need a valid ID proof. Foreign tourists need a Protected Area Permit (PAP) issued from Gangtok.</p>
-      </details>
-      <details>
-        <summary><strong>What is the best time to visit North Sikkim?</strong></summary>
-        <p>March to June and October to December are ideal for clear skies and great views.</p>
-      </details>
-      <details>
-        <summary><strong>Do you provide fully customizable packages?</strong></summary>
-        <p>Yes, we create personalized packages based on your budget, group size, and preferences.</p>
-      </details>
-      <details>
-        <summary><strong>Is transportation included in the package?</strong></summary>
-        <p>Yes, all packages include pickup, drop, and inter-destination transfers.</p>
-      </details>
+    <div class="faq">
+      <div class="faq-item">
+        <h4>How do I book a tour package?</h4>
+        <p>You can call or WhatsApp us directly. Online booking option will be added soon.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do you offer customized itineraries?</h4>
+        <p>Yes! We personalize every itinerary based on your interests and preferences.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Are all your packages family-friendly?</h4>
+        <p>Yes. We have carefully curated options for families, couples, and senior citizens.</p>
+      </div>
     </div>
   </section>  <footer>
+    <p>📞 +91 74397 92489 &nbsp; | &nbsp; 📧 info.safarajkal@gmail.com</p>
+    <p>💬 <a href="https://wa.me/917439792489" style="color:#4fc3f7; font-weight:600;">Chat on WhatsApp</a></p>
     <p>© 2025 Safar aj kal Holidays. All rights reserved.</p>
     <p>Follow us on Instagram & Facebook: @safarajkalholidays</p>
     <p>Website built on GitHub Pages</p>
