@@ -1,227 +1,152 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Safar Aj Kal Holidays - Your trusted travel partner for curated packages across India">
   <title>Safar Aj Kal Holidays</title>
-  <meta name="description" content="Discover India with expertly curated travel packages from Safar Aj Kal Holidays. Explore Sikkim, Goa, Sundarbans, and more." />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    * {
+    body, html {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-}
-
-header {
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo img {
-  height: 50px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #f76b1c;
-}
-
-.hero {
-  background: url('https://safarajkalholidays.github.io/drj.jpg') center/cover no-repeat;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: white;
-  text-align: center;
-  position: relative;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.hero h1,
-.hero p {
-  position: relative;
-  z-index: 1;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 50px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 18px;
-  max-width: 600px;
-}
-
-.section {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.section h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-
-.card {
-  flex: 1 1 300px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.card-content h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.card-content p {
-  font-size: 14px;
-}
-
-footer {
-  background: #1b3a5f;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.social-icons a {
-  color: white;
-  margin: 0 10px;
-  font-size: 20px;
-}
-
-.whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  border-radius: 50%;
-  padding: 15px;
-  font-size: 24px;
-  z-index: 999;
-}
-
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #fff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 45px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    .hero {
+      width: 100%;
+      aspect-ratio: 9/14;
+      background: url('https://safarajkalholidays.github.io/drj.jpg') center center/cover no-repeat;
+      position: relative;
+    }
+    .hero-content {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      background-color: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .hero-content h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .package {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    footer {
+      background: #1b3a5f;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .socials a {
+      color: white;
+      font-size: 20px;
+      margin: 0 10px;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      z-index: 9999;
+    }
   </style>
-</head><body>
-  <header>
-    <div class="logo">
-      <img src="https://safarajkalholidays.github.io/logo.png" alt="Safar Aj Kal Holidays">
-    </div>
+</head>
+<body>  <header>
+    <img src="https://safarajkalholidays.github.io/logo.png" alt="Safar Aj Kal Holidays Logo">
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#packages">Packages</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#packages">Packages</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>  <section class="hero" id="home">
-    <h1>Safar Aj Kal Holidays</h1>
-    <p>Explore India with our exclusive handcrafted tour packages.</p>
-  </section>  <section class="section" id="packages">
-    <h2>Featured Packages</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?mountain,india" alt="Silk Route">
-        <div class="card-content">
-          <h3>Silk Route Tour</h3>
-          <p>3N/4D package covering Icchegaon, Zuluk & Nathang Valley with breathtaking views.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?forest,sundarbans" alt="Sundarbans">
-        <div class="card-content">
-          <h3>Sundarban Safari</h3>
-          <p>2N/3D group tour with boat rides & riverside stay in the mangrove forest region.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?beach,goa" alt="Goa">
-        <div class="card-content">
-          <h3>Goa Honeymoon</h3>
-          <p>4N/5D romantic getaway with private beaches, spa & Mandovi cruise.</p>
-        </div>
-      </div>
+    <div class="hero-content">
+      <h1>Safar Aj Kal Holidays</h1>
+      <p>Your Gateway to Memorable Journeys Across India</p>
     </div>
   </section>  <section class="section" id="about">
     <h2>About Us</h2>
-    <p style="max-width: 800px; margin: auto; text-align: center;">
-      Safar Aj Kal Holidays is your trusted travel partner for domestic adventures across India. Whether it's a peaceful hill stay or thrilling wildlife retreat — we ensure seamless planning and joyful memories.
-    </p>
-  </section>  <footer id="contact">
-    <p>📞 +91 74397 92489 | 📧 info.safarajkal@gmail.com</p>
-    <div class="social-icons">
+    <p>We are your trusted travel planners offering curated and memorable experiences across the diverse landscape of India. Our mission is to simplify your travel planning and deliver experiences that stay with you forever.</p>
+  </section>  <section class="section" id="packages">
+    <h2>Our Popular Packages</h2>
+    <div class="package-grid">
+      <div class="package">
+        <h3>Silk Route Tour (3N/4D)</h3>
+        <p>Explore Zuluk, Nathang, Icchegaon with amazing views and history.</p>
+      </div>
+      <div class="package">
+        <h3>Romantic Goa Escape (4N/5D)</h3>
+        <p>Private beach dinners, South Goa stays, Mandovi cruise and more.</p>
+      </div>
+      <div class="package">
+        <h3>Sundarban Ilish Festival</h3>
+        <p>Group departures, wildlife boat safari, village stay and Bengali cuisine.</p>
+      </div>
+    </div>
+  </section>  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> +91 74397 92489</p>
+    <p><strong>Email:</strong> info.safarajkal@gmail.com</p>
+  </section>  <footer>
+    <p>Follow us on:</p>
+    <div class="socials">
       <a href="https://www.instagram.com/safarajkalholidays/profilecard/?igsh=MW5ua3ZpMHNiYWw2bg==" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/share/1YZf5Uj6Qe/" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://www.youtube.com/@SafarAjkalHolidays" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
-    <p>&copy; 2025 Safar Aj Kal Holidays</p>
+    <p>&copy; 2025 Safar Aj Kal Holidays. All rights reserved.</p>
   </footer>  <a href="https://wa.me/917439792489" class="whatsapp-btn" target="_blank">
     <i class="fab fa-whatsapp"></i>
-  </a>
-</body></html>
+  </a></body>
+</html>
