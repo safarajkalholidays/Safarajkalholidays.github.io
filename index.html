@@ -1,10 +1,9 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Safar Aj Kal Holidays</title>
-  <meta name="description" content="Explore curated travel packages across India with Safar Aj Kal Holidays. Sikkim, Goa, Sundarbans, and more." />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body, html {
       margin: 0;
@@ -31,6 +30,7 @@
       color: #333;
       cursor: pointer;
       display: block;
+      z-index: 1001;
     }
     .mobile-nav {
       position: fixed;
@@ -58,36 +58,32 @@
     .mobile-nav.active {
       right: 0;
     }
-    .hero-image {
+    .hero {
       width: 100%;
-      height: auto;
-      aspect-ratio: 9 / 14;
+      aspect-ratio: 9/14;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       display: block;
-      border-radius: 12px;
     }
-    .caption {
-      text-align: center;
-      padding: 30px 20px;
-    }
-    .caption h1 {
-      font-size: 2.5rem;
-    }
-    .caption p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: auto;
-    }
-    section {
+    .section {
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
-    .packages, .faq, .blog, .testimonials, .enquiry-form {
-      background: #f5f5f5;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      padding: 25px;
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #1b3a5f;
+    }
+    .section p {
+      text-align: center;
+      font-size: 16px;
     }
     footer {
       background: #1b3a5f;
@@ -112,21 +108,6 @@
       z-index: 9999;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      background-color: #1b3a5f;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
@@ -137,48 +118,33 @@
     <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
   </header>  <nav class="mobile-nav" id="mobileNav">
     <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
     <a href="#packages" onclick="closeMenu()">Packages</a>
-    <a href="#faq" onclick="closeMenu()">FAQs</a>
-    <a href="#blog" onclick="closeMenu()">Blog</a>
-    <a href="#testimonials" onclick="closeMenu()">Reviews</a>
-    <a href="#enquiry" onclick="closeMenu()">Enquiry</a>
+    <a href="#silkroute" onclick="closeMenu()">Silk Route</a>
+    <a href="#northsikkim" onclick="closeMenu()">North Sikkim</a>
+    <a href="#sundarban" onclick="closeMenu()">Sundarban</a>
+    <a href="#goa" onclick="closeMenu()">Goa Honeymoon</a>
     <a href="#contact" onclick="closeMenu()">Contact</a>
-  </nav>  <div id="home">
-    <img src="https://safarajkalholidays.github.io/drj.jpg" class="hero-image" alt="Travel Hero">
-  </div>  <div class="caption">
-    <h1>Safar Aj Kal Holidays</h1>
-    <p>Your Gateway to Memorable Journeys – Trusted Travel Experiences Across India</p>
-  </div>  <section class="packages" id="packages">
-    <h2>Top Travel Packages</h2>
-    <ul>
-      <li>✨ Silk Route Tour (3N/4D)</li>
-      <li>✨ Romantic Goa Honeymoon</li>
-      <li>✨ Sundarban Wildlife Group Tour</li>
-    </ul>
-  </section>  <section class="faq" id="faq">
-    <h2>FAQs</h2>
-    <p><strong>Q:</strong> How do I book a tour?<br><strong>A:</strong> Contact us or fill out the enquiry form below.</p>
-    <p><strong>Q:</strong> Do you arrange permits?<br><strong>A:</strong> Yes, we help with Silk Route & restricted area permits.</p>
-  </section>  <section class="blog" id="blog">
-    <h2>Latest Blog</h2>
-    <p>🏔️ Top 10 Hidden Gems in India<br>💑 Planning a Budget Honeymoon<br>🌸 Best Time to Visit Sikkim</p>
-  </section>  <section class="testimonials" id="testimonials">
-    <h2>Client Reviews</h2>
-    <p>“One of the best travel planners! Our Sikkim trip was flawless.” – Priya S.</p>
-    <p>“Affordable and genuine service. Highly recommend!” – Rahul T.</p>
-  </section>  <section class="enquiry-form" id="enquiry">
-    <h2>Enquiry Form</h2>
-    <form action="mailto:info.safarajkal@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required />
-      <input type="email" name="Email" placeholder="Your Email" required />
-      <textarea name="Message" placeholder="Your Travel Plan/Query"></textarea>
-      <button type="submit">Submit</button>
-    </form>
+  </nav>  <div class="hero" id="home">
+    <img src="https://safarajkalholidays.github.io/drj.jpg" alt="Hero Image">
+  </div>  <section class="section" id="silkroute">
+    <h2>Silk Route Tour (3N/4D)</h2>
+    <p>Explore Icchegaon, Zuluk, and Nathang Valley with scenic views, authentic homestays, and majestic mountain roads.</p>
+  </section>  <section class="section" id="northsikkim">
+    <h2>North Sikkim (4N/5D)</h2>
+    <p>Experience Gangtok, Lachen, Lachung, Yumthang Valley and Gurudongmar Lake with snow-capped adventure and warm hospitality.</p>
+  </section>  <section class="section" id="sundarban">
+    <h2>Sundarban Group Tour (2N/3D)</h2>
+    <p>Boat safari, wildlife spotting, bird watching, and local village life in the world’s largest mangrove forest.</p>
+  </section>  <section class="section" id="goa">
+    <h2>Goa Honeymoon Special (4N/5D)</h2>
+    <p>Romantic beach dinners, Mandovi cruise, and luxurious stays in South Goa curated for unforgettable memories.</p>
   </section>  <footer id="contact">
     <h2>Contact Us</h2>
-    <p>📞 +91 74397 92489<br>📧 info.safarajkal@gmail.com</p>
+    <p>📞 +91 74397 92489<br>
+    📧 info.safarajkal@gmail.com</p>
     <div class="social-icons">
-      <a href="https://www.instagram.com/safarajkalholidays/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/safarajkalholidays/profilecard/?igsh=MW5ua3ZpMHNiYWw2bg==" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/share/1YZf5Uj6Qe/" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://www.youtube.com/@SafarAjkalHolidays" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
@@ -187,12 +153,19 @@
     <i class="fab fa-whatsapp"></i>
   </a>  <script>
     function toggleMenu() {
-      document.getElementById('mobileNav').classList.toggle('active');
+      const menu = document.getElementById('mobileNav');
+      menu.classList.toggle('active');
     }
+
     function closeMenu() {
-      document.getElementById('mobileNav').classList.remove('active');
+      const menu = document.getElementById('mobileNav');
+      menu.classList.remove('active');
     }
-    window.addEventListener('scroll', closeMenu);
+
+    window.addEventListener('scroll', () => {
+      closeMenu();
+    });
+
     document.addEventListener('click', function(event) {
       const nav = document.getElementById('mobileNav');
       const toggle = document.querySelector('.menu-toggle');
