@@ -1,148 +1,220 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Safar Aj Kal Holidays</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Discover India with expertly curated travel packages from Safar Aj Kal Holidays. Explore Sikkim, Goa, Sundarbans, and more." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    body, html {
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 25px;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    .logo-section img {
-      height: 50px;
-    }
-    .menu-toggle {
-      font-size: 24px;
-      color: #333;
-      cursor: pointer;
-      display: block;
-      z-index: 1001;
-    }
-    .mobile-nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 250px;
-      height: 100vh;
-      background-color: #fff;
-      box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-      padding: 60px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      transition: right 0.3s ease-in-out;
-      z-index: 1000;
-    }
-    .mobile-nav a {
-      color: #333;
-      text-decoration: none;
-      font-size: 18px;
-    }
-    .mobile-nav a:hover {
-      color: #f76b1c;
-    }
-    .mobile-nav.active {
-      right: 0;
-    }
-    .hero {
-      width: 100%;
-      aspect-ratio: 9/14;
-      overflow: hidden;
-      border-radius: 20px;
-    }
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 28px;
-      color: #1b3a5f;
-    }
-    .section p {
-      text-align: center;
-      font-size: 16px;
-    }
-    footer {
-      background: #1b3a5f;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    footer .social-icons a {
-      color: white;
-      margin: 0 10px;
-      font-size: 20px;
-    }
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      border-radius: 50%;
-      padding: 15px;
-      font-size: 24px;
-      z-index: 9999;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
+      box-sizing: border-box;
+    }body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f76b1c;
+}
+
+.hero {
+  background: url('https://safarajkalholidays.github.io/drj.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card-content p {
+  font-size: 14px;
+}
+
+footer {
+  background: #1b3a5f;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  z-index: 999;
+}
+
   </style>
-</head>
-<body>
+</head><body>
   <header>
-    <div class="logo-section">
+    <div class="logo">
       <img src="https://safarajkalholidays.github.io/logo.png" alt="Safar Aj Kal Holidays">
     </div>
-    <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
-  </header>  <nav class="mobile-nav" id="mobileNav">
-    <a href="#home" onclick="closeMenu()">Home</a>
-    <a href="#about" onclick="closeMenu()">About</a>
-    <a href="#packages" onclick="closeMenu()">Packages</a>
-    <a href="#silkroute" onclick="closeMenu()">Silk Route</a>
-    <a href="#northsikkim" onclick="closeMenu()">North Sikkim</a>
-    <a href="#sundarban" onclick="closeMenu()">Sundarban</a>
-    <a href="#goa" onclick="closeMenu()">Goa Honeymoon</a>
-    <a href="#contact" onclick="closeMenu()">Contact</a>
-  </nav>  <div class="hero" id="home">
-    <img src="https://safarajkalholidays.github.io/drj.jpg" alt="Hero Image">
-  </div>  <section class="section" id="silkroute">
-    <h2>Silk Route Tour (3N/4D)</h2>
-    <p>Explore Icchegaon, Zuluk, and Nathang Valley with scenic views, authentic homestays, and majestic mountain roads.</p>
-  </section>  <section class="section" id="northsikkim">
-    <h2>North Sikkim (4N/5D)</h2>
-    <p>Experience Gangtok, Lachen, Lachung, Yumthang Valley and Gurudongmar Lake with snow-capped adventure and warm hospitality.</p>
-  </section>  <section class="section" id="sundarban">
-    <h2>Sundarban Group Tour (2N/3D)</h2>
-    <p>Boat safari, wildlife spotting, bird watching, and local village life in the world’s largest mangrove forest.</p>
-  </section>  <section class="section" id="goa">
-    <h2>Goa Honeymoon Special (4N/5D)</h2>
-    <p>Romantic beach dinners, Mandovi cruise, and luxurious stays in South Goa curated for unforgettable memories.</p>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>  <section class="hero" id="home">
+    <h1>Safar Aj Kal Holidays</h1>
+    <p>Explore India with our exclusive handcrafted tour packages.</p>
+  </section>  <section class="section" id="packages">
+    <h2>Featured Packages</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/600x400/?mountain,india" alt="Silk Route">
+        <div class="card-content">
+          <h3>Silk Route Tour</h3>
+          <p>3N/4D package covering Icchegaon, Zuluk & Nathang Valley with breathtaking views.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/600x400/?forest,sundarbans" alt="Sundarbans">
+        <div class="card-content">
+          <h3>Sundarban Safari</h3>
+          <p>2N/3D group tour with boat rides & riverside stay in the mangrove forest region.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/600x400/?beach,goa" alt="Goa">
+        <div class="card-content">
+          <h3>Goa Honeymoon</h3>
+          <p>4N/5D romantic getaway with private beaches, spa & Mandovi cruise.</p>
+        </div>
+      </div>
+    </div>
+  </section>  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+      Safar Aj Kal Holidays is your trusted travel partner for domestic adventures across India. Whether it's a peaceful hill stay or thrilling wildlife retreat — we ensure seamless planning and joyful memories.
+    </p>
   </section>  <footer id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 +91 74397 92489<br>
-    📧 info.safarajkal@gmail.com</p>
+    <p>📞 +91 74397 92489 | 📧 info.safarajkal@gmail.com</p>
     <div class="social-icons">
       <a href="https://www.instagram.com/safarajkalholidays/profilecard/?igsh=MW5ua3ZpMHNiYWw2bg==" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/share/1YZf5Uj6Qe/" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -151,27 +223,5 @@
     <p>&copy; 2025 Safar Aj Kal Holidays</p>
   </footer>  <a href="https://wa.me/917439792489" class="whatsapp-btn" target="_blank">
     <i class="fab fa-whatsapp"></i>
-  </a>  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileNav');
-      menu.classList.toggle('active');
-    }
-
-    function closeMenu() {
-      const menu = document.getElementById('mobileNav');
-      menu.classList.remove('active');
-    }
-
-    window.addEventListener('scroll', () => {
-      closeMenu();
-    });
-
-    document.addEventListener('click', function(event) {
-      const nav = document.getElementById('mobileNav');
-      const toggle = document.querySelector('.menu-toggle');
-      if (!nav.contains(event.target) && !toggle.contains(event.target)) {
-        closeMenu();
-      }
-    });
-  </script></body>
-</html>
+  </a>
+</body></html>
