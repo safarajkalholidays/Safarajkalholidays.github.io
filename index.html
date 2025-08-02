@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safar Aj Kal Holidays</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .logo-section img {
+      height: 50px;
+    }
+    .menu-toggle {
+      font-size: 24px;
+      color: #333;
+      cursor: pointer;
+      display: block;
+      z-index: 1001;
+    }
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100vh;
+      background-color: #fff;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+    .mobile-nav a {
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .mobile-nav a:hover {
+      color: #f76b1c;
+    }
+    .mobile-nav.active {
+      right: 0;
+    }
+    .hero-section {
+      width: 100%;
+      aspect-ratio: 9 / 14;
+      background: url('https://safarajkalholidays.github.io/drj.jpg') no-repeat center center/cover;
+    }
+    .carousel-caption {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .carousel-caption h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .carousel-caption p {
+      font-size: 1.2rem;
+      max-width: 80%;
+      margin: auto;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .packages, .faq, .blog, #about {
+      background: #f5f5f5;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    footer {
+      background: #1b3a5f;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+    }
+    footer .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      z-index: 9999;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    @media (min-width: 768px) {
+      .menu-toggle, .mobile-nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-section">
+      <img src="https://safarajkalholidays.github.io/logo.png" alt="Safar Aj Kal Holidays">
+    </div>
+    <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+    <a href="#packages" onclick="closeMenu()">Packages</a>
+    <a href="#faq" onclick="closeMenu()">FAQs</a>
+    <a href="#blog" onclick="closeMenu()">Blog</a>
+  </nav>
+
+  <div class="hero-section" id="home"></div>
+
+  <div class="carousel-caption">
+    <h1>Safar Aj Kal Holidays</h1>
+    <p>Your Gateway to Memorable Journeys – Trusted Travel Experiences Across India</p>
+  </div>
+
+  <section id="about">
+    <h2>About Safar Aj Kal Holidays</h2>
+    <p><strong>Safar Aj Kal Holidays</strong> is a trusted travel agency based in India, offering curated holiday packages, honeymoon trips, family tours, and adventure getaways across popular destinations like <strong>Goa, Sikkim, Himachal Pradesh, Sundarbans</strong> and beyond.</p>
+    <p>Our mission is to help travelers create unforgettable memories with <strong>affordable, customized, and hassle-free travel experiences</strong>. Whether you're looking for a romantic escape, a weekend getaway, or a group tour, we design every itinerary with care and local expertise.</p>
+    <p>Backed by years of experience and happy clients, we ensure 24/7 support, local guides, and the best value-for-money packages for every traveler. Explore India like never before with <strong>Safar Aj Kal Holidays – Your Journey Starts Here!</strong></p>
+  </section>
+
+  <section class="packages" id="packages">
+    <h2>Top Travel Packages</h2>
+    <p>✨ Silk Route Tour (3N/4D)<br>✨ Romantic Goa Honeymoon<br>✨ Sundarban Wildlife Group Tour</p>
+  </section>
+
+  <section class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>Q:</strong> How do I book a tour?<br><strong>A:</strong> Contact us or use the enquiry form below.</p>
+    <p><strong>Q:</strong> Do you offer customized travel plans?<br><strong>A:</strong> Yes, we design trips as per your budget and preferences.</p>
+    <p><strong>Q:</strong> Is there support during the tour?<br><strong>A:</strong> Absolutely! Our team is available 24/7 during your trip.</p>
+  </section>
+
+  <section class="blog" id="blog">
+    <h2>Latest Blog & News</h2>
+    <p>Coming soon: Top 10 Hidden Gems in India, How to Plan a Budget Honeymoon, Best Time to Visit Sikkim.</p>
+  </section>
+
+  <footer id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 +91 74397 92489<br>
+    📧 info.safarajkal@gmail.com</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/safarajkalholidays/profilecard/?igsh=MW5ua3ZpMHNiYWw2bg==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/1YZf5Uj6Qe/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.youtube.com/@SafarAjkalHolidays" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2025 Safar Aj Kal Holidays</p>
+  </footer>
+
+  <a href="https://wa.me/917439792489" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileNav');
+      menu.classList.toggle('active');
+    }
+
+    function closeMenu() {
+      const menu = document.getElementById('mobileNav');
+      menu.classList.remove('active');
+    }
+
+    window.addEventListener('scroll', () => {
+      closeMenu();
+    });
+
+    document.addEventListener('click', function(event) {
+      const nav = document.getElementById('mobileNav');
+      const toggle = document.querySelector('.menu-toggle');
+      if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+        closeMenu();
+      }
+    });
+  </script>
+</body>
+</html>
