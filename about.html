@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us – Safar Aj Kal Holidays</title>
-  <meta name="description" content="Learn more about Safar Aj Kal Holidays – trusted travel planners offering personalized holiday experiences across India.">
+  <title>About – Safar Aj Kal Holidays</title>
+  <meta name="description" content="Learn about Safar Aj Kal Holidays – trusted travel agency in India offering curated travel experiences.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body, html {
@@ -134,7 +134,7 @@
   <nav class="mobile-nav" id="mobileNav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="#contact" onclick="closeMenu()">Contact</a>
+    <a href="index.html#contact">Contact</a>
     <a href="index.html#packages">Packages</a>
     <a href="index.html#faq">FAQs</a>
     <a href="index.html#blog">Blog</a>
@@ -142,13 +142,20 @@
 
   <section class="section">
     <h1>About Safar Aj Kal Holidays</h1>
-    <p><strong>Safar Aj Kal Holidays</strong> is a dedicated travel planning company helping Indian travelers explore the country’s most scenic, spiritual, and adventurous destinations. Whether you're planning a honeymoon, a family trip, or a group getaway – we have the right experience for you.</p>
-    
-    <p>We specialize in tailor-made holiday packages across <strong>Sikkim, Goa, Himachal, Uttarakhand, Kerala, Sundarbans</strong> and more, offering handpicked stays, local experiences, and seamless transport services – all at the best price.</p>
+    <p><strong>Safar Aj Kal Holidays</strong> is a reliable Indian travel agency offering customized holiday packages, honeymoon trips, family vacations, and group tours across stunning locations such as <strong>Goa, Himachal Pradesh, Sikkim, Sundarbans</strong> and more.</p>
 
-    <p>With 24x7 support, verified properties, experienced tour coordinators and a personal touch in everything we do – our mission is to make your journey <strong>safe, memorable, and worry-free</strong>.</p>
+    <p>We believe in making every journey <strong>affordable, personalized, and memorable</strong>. Our travel experts design each itinerary with care, ensuring a seamless experience from booking to return.</p>
 
-    <p>Join 1000+ happy travelers who have already chosen <strong>Safar Aj Kal Holidays</strong> to create lifelong memories. Your next trip begins here!</p>
+    <p>Why choose us?
+      <ul>
+        <li>✔ 24/7 travel assistance</li>
+        <li>✔ Local guides & verified accommodations</li>
+        <li>✔ Budget-friendly, tailored travel plans</li>
+        <li>✔ 1000+ happy clients and growing</li>
+      </ul>
+    </p>
+
+    <p>Join us and discover India like never before. <strong>Your journey begins with Safar Aj Kal Holidays!</strong></p>
   </section>
 
   <footer id="contact">
@@ -168,13 +175,11 @@
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('mobileNav');
-      menu.classList.toggle('active');
+      document.getElementById('mobileNav').classList.toggle('active');
     }
 
     function closeMenu() {
-      const menu = document.getElementById('mobileNav');
-      menu.classList.remove('active');
+      document.getElementById('mobileNav').classList.remove('active');
     }
 
     window.addEventListener('scroll', closeMenu);
