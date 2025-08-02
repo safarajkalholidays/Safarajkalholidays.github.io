@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Safar Aj Kal Holidays</title>
-  <meta name="description" content="Learn more about Safar Aj Kal Holidays – your trusted travel partner for curated, affordable and memorable tours across India." />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – Safar Aj Kal Holidays</title>
+  <meta name="description" content="Learn more about Safar Aj Kal Holidays – trusted travel planners offering personalized holiday experiences across India.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #fff;
-      color: #333;
     }
 
     header {
@@ -30,15 +30,12 @@
       height: 50px;
     }
 
-    .desktop-nav {
-      display: none;
-    }
-
     .menu-toggle {
       font-size: 24px;
       color: #333;
       cursor: pointer;
       display: block;
+      z-index: 1001;
     }
 
     .mobile-nav {
@@ -71,46 +68,30 @@
       right: 0;
     }
 
-    @media (min-width: 768px) {
-      .desktop-nav {
-        display: flex;
-        gap: 25px;
-      }
-
-      .menu-toggle, .mobile-nav {
-        display: none;
-      }
-
-      .desktop-nav a {
-        color: #333;
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      .desktop-nav a:hover {
-        color: #f76b1c;
-      }
-    }
-
-    .main {
-      padding: 50px 20px;
-      max-width: 900px;
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: auto;
-      line-height: 1.8;
     }
 
-    .main h1 {
-      font-size: 36px;
+    .section h1 {
+      font-size: 32px;
       margin-bottom: 20px;
-      color: #003366;
+      text-align: center;
+    }
+
+    .section p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: justify;
     }
 
     footer {
       background: #1b3a5f;
       color: white;
+      padding: 30px 20px;
       text-align: center;
-      padding: 40px 20px;
-      margin-top: 60px;
     }
 
     footer .social-icons a {
@@ -131,47 +112,47 @@
       z-index: 9999;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
+
+    @media (min-width: 768px) {
+      .menu-toggle, .mobile-nav {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
     <div class="logo-section">
-      <a href="/"><img src="https://safarajkalholidays.github.io/logo.png" alt="Safar Aj Kal Holidays"></a>
+      <a href="index.html">
+        <img src="https://safarajkalholidays.github.io/logo.png" alt="Safar Aj Kal Holidays">
+      </a>
     </div>
-    <nav class="desktop-nav">
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/packages/">Packages</a>
-      <a href="/faq/">FAQs</a>
-      <a href="/#contact">Contact</a>
-    </nav>
     <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
   </header>
 
   <nav class="mobile-nav" id="mobileNav">
-    <a href="/">Home</a>
-    <a href="/about/" onclick="closeMenu()">About</a>
-    <a href="/packages/" onclick="closeMenu()">Packages</a>
-    <a href="/faq/" onclick="closeMenu()">FAQs</a>
-    <a href="/#contact" onclick="closeMenu()">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+    <a href="index.html#packages">Packages</a>
+    <a href="index.html#faq">FAQs</a>
+    <a href="index.html#blog">Blog</a>
   </nav>
 
-  <main class="main">
-    <h1>About Us</h1>
-    <p>
-      At <strong>Safar Aj Kal Holidays</strong>, we believe travel isn’t just about destinations—it’s about experiences. Since our inception, we've been helping families, couples, and solo explorers discover India's diverse beauty through curated and affordable travel packages. Whether you're dreaming of Sikkim’s misty hills, the serene backwaters of Kerala, or a Sundarban wildlife adventure, we’ve got you covered.
-    </p>
-    <p>
-      With personalized itineraries, local expertise, and 24/7 customer support, our mission is simple: to make every journey joyful, stress-free, and unforgettable. We work with trusted homestays, experienced guides, and reliable transport providers to ensure safety, comfort, and authenticity.
-    </p>
-    <p>
-      Join us on a journey where every mile is a memory. Because with Safar Aj Kal Holidays—your safar truly begins today!
-    </p>
-  </main>
+  <section class="section">
+    <h1>About Safar Aj Kal Holidays</h1>
+    <p><strong>Safar Aj Kal Holidays</strong> is a dedicated travel planning company helping Indian travelers explore the country’s most scenic, spiritual, and adventurous destinations. Whether you're planning a honeymoon, a family trip, or a group getaway – we have the right experience for you.</p>
+    
+    <p>We specialize in tailor-made holiday packages across <strong>Sikkim, Goa, Himachal, Uttarakhand, Kerala, Sundarbans</strong> and more, offering handpicked stays, local experiences, and seamless transport services – all at the best price.</p>
 
-  <footer>
-    <h3>Contact Us</h3>
+    <p>With 24x7 support, verified properties, experienced tour coordinators and a personal touch in everything we do – our mission is to make your journey <strong>safe, memorable, and worry-free</strong>.</p>
+
+    <p>Join 1000+ happy travelers who have already chosen <strong>Safar Aj Kal Holidays</strong> to create lifelong memories. Your next trip begins here!</p>
+  </section>
+
+  <footer id="contact">
+    <h2>Contact Us</h2>
     <p>📞 +91 74397 92489<br>📧 info.safarajkal@gmail.com</p>
     <div class="social-icons">
       <a href="https://www.instagram.com/safarajkalholidays/profilecard/?igsh=MW5ua3ZpMHNiYWw2bg==" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -192,17 +173,19 @@
     }
 
     function closeMenu() {
-      document.getElementById('mobileNav').classList.remove('active');
+      const menu = document.getElementById('mobileNav');
+      menu.classList.remove('active');
     }
 
     window.addEventListener('scroll', closeMenu);
-    document.addEventListener('click', function (e) {
+    document.addEventListener('click', function(event) {
       const nav = document.getElementById('mobileNav');
       const toggle = document.querySelector('.menu-toggle');
-      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+      if (!nav.contains(event.target) && !toggle.contains(event.target)) {
         closeMenu();
       }
     });
   </script>
+
 </body>
 </html>
