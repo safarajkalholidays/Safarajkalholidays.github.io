@@ -58,37 +58,24 @@
     .mobile-nav.active {
       right: 0;
     }
-    .carousel {
-      position: relative;
-      overflow: hidden;
+    .hero {
       width: 100%;
-      height: 45vh;
-      border-radius: 20px;
-      margin: 20px 0;
+      aspect-ratio: 9 / 14;
+      background: url('https://safarajkalholidays.github.io/drj.jpg') center/cover no-repeat;
+      border-radius: 15px;
+      margin: 0 auto;
     }
-    .slides {
-      display: flex;
-      width: 500%;
-      height: 100%;
-      transition: transform 1s ease;
-    }
-    .slides img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 20px;
-    }
-    .carousel-caption {
+    .hero-caption {
       text-align: center;
-      padding: 20px 20px;
+      padding: 40px 20px;
     }
-    .carousel-caption h1 {
-      font-size: 2.5rem;
+    .hero-caption h1 {
+      font-size: 3rem;
       margin-bottom: 10px;
     }
-    .carousel-caption p {
-      font-size: 1.1rem;
-      max-width: 90%;
+    .hero-caption p {
+      font-size: 1.2rem;
+      max-width: 80%;
       margin: auto;
     }
     section {
@@ -146,15 +133,7 @@
     <a href="#packages" onclick="closeMenu()">Packages</a>
     <a href="#faq" onclick="closeMenu()">FAQs</a>
     <a href="#blog" onclick="closeMenu()">Blog</a>
-  </nav>  <div class="carousel" id="home">
-    <div class="slides" id="slides">
-      <img src="https://safarajkalholidays.github.io/drj.jpg" alt="Slide 1">
-      <img src="https://safarajkalholidays.github.io/drj.jpg" alt="Slide 2">
-      <img src="https://safarajkalholidays.github.io/drj.jpg" alt="Slide 3">
-      <img src="https://safarajkalholidays.github.io/drj.jpg" alt="Slide 4">
-      <img src="https://safarajkalholidays.github.io/drj.jpg" alt="Slide 5">
-    </div>
-  </div>  <div class="carousel-caption">
+  </nav>  <div class="hero" id="home"></div>  <div class="hero-caption">
     <h1>Safar Aj Kal Holidays</h1>
     <p>Your Gateway to Memorable Journeys – Trusted Travel Experiences Across India</p>
   </div>  <section class="packages" id="packages">
@@ -200,13 +179,5 @@
         closeMenu();
       }
     });
-
-    // Auto slide carousel infinitely
-    let index = 0;
-    const totalSlides = 5;
-    setInterval(() => {
-      index = (index + 1) % totalSlides;
-      document.getElementById('slides').style.transform = `translateX(-${index * 100}%)`;
-    }, 6000);
   </script></body>
 </html>
